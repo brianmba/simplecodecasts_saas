@@ -1,11 +1,12 @@
 class ContactMailer < ActionMailer::Base
-   default to: "brian@locable.com"
-       
-    def contact_email(name, email, body)
-        @name = name
-        @email = email
-        @body = body
-        
-        mail(from: email, subject: 'Contact form message')
-    end       
+  
+  default to: 'your@email_address.com'
+  
+  def contact_email(name, email, body)
+    @name = name
+    @email = email
+    @body = body
+    mail(from: email, subject: 'Contact Form Message')
+  end
+
 end
